@@ -16,6 +16,7 @@
     - **ColorMyviews**: build responsive views with constraint layout.
 	- **AndroidTrivia**: introduction to navigation graphs, navigation drawer and fragments.
 	- **DessertPusher**: handling acitivty/ fragment lifecycle and observers.
+	- **GuessIt**: a word guessing game to learn about application archeticture, viewModel and LiveData.
 	
 # Tools
 
