@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TitleStyle">
+        <item name="android:layout_marginTop">@dimen/layout_margin</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:paddingTop">@dimen/small_padding</item>
+        <item name="android:textColor">#040404</item>
+        <item name="android:textSize">@dimen/medium_size</item>
+    </style>
+    <style name="SubTitleStyle">
+        <item name="android:layout_marginTop">@dimen/layout_margin</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:paddingTop">@dimen/small_padding</item>
+        <item name="android:textColor">#C0C0C0</item>
+        <item name="android:textSize">@dimen/medium_size</item>
+    </style>
+
+</resources>
