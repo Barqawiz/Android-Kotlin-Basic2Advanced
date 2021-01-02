@@ -18,6 +18,7 @@
 	- **DessertPusher**: handling acitivty/ fragment lifecycle and observers.
 	- **GuessIt**: a word guessing game to learn about application archeticture, viewModel and liveData.
 	- **SleepQualityTracker**: MVVM application with Room database, recyclerview, coroutines and basic unit testing.
+	- **GridSleepQualityTracker**: MVVM application with Room database and grid layout.
 	
 
 # Tools
