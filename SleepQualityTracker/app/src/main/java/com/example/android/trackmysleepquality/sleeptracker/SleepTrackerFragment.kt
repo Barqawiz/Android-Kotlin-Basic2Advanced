@@ -60,6 +60,10 @@ class SleepTrackerFragment : Fragment() {
         binding.sleepTrackerViewModel = viewModel
         binding.lifecycleOwner = this
 
+        // set list items
+        var adapter = SleepNightAdapter()
+        binding.sleepList.adapter = adapter
+
         // set observers
         viewModel.navigateToSleepQuality.observe(viewLifecycleOwner) { night ->
             night?.let {
@@ -74,6 +78,14 @@ class SleepTrackerFragment : Fragment() {
                 Snackbar.make(activity!!.findViewById(android.R.id.content),
                 getString(R.string.cleared_message), Snackbar.LENGTH_SHORT).show()
                 viewModel.onDoneShowingSnackbar()
+            }
+        }
+
+        viewModel.allNights.observe(viewLifecycleOwner) { nights ->
+            nights?.let {
+                // deprecated from recycle adapter
+                // adapter.data = nights
+                adapter.submitList(nights)
             }
         }
 
