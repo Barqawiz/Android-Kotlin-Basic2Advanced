@@ -17,8 +17,9 @@
 	- **AndroidTrivia**: introduction to navigation graphs, navigation drawer and fragments.
 	- **DessertPusher**: handling acitivty/ fragment lifecycle and observers.
 	- **GuessIt**: a word guessing game to learn about application archeticture, viewModel and liveData.
-	- **SleepQualityTracker**: MVVM application with Room database, recyclerview, coroutines and basic unit testing.
-	- **GridSleepQualityTracker**: MVVM application with Room database and grid layout.
+	- **SleepQualityTracker**: room database, recyclerview, coroutines and basic unit testing.
+	- **GridSleepQualityTracker**: room database and grid layout.
+	- **MarsRealEstate**: use retrofit to connect to an API to fetch Mars real estates!
 	
 
 # Tools
