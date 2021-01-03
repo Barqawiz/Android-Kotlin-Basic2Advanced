@@ -1,6 +1,7 @@
 # Android Kotlin Basic2Advanced
 
- A series of Android Kotlin apps based on Google & Udacity trainings. In addition to extra resources to cover latest MAD features and Android associate developer certificate requirements.
+ <image src="Resources/android_head.png" width="200px" />
+<p> A series of Android Kotlin apps based on Google & Udacity trainings. In addition to extra resources to cover latest MAD features and Android associate developer certificate requirements.</p>
  
  This repository includes Kotlin sample application created based on latest Android guidelines available in the following references:<br>
 - Developing Android apps with Kotlin series. <br>
