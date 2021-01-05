@@ -22,9 +22,9 @@
 - **SleepQualityTracker**: room database, recyclerview, coroutines and basic unit testing.<br><br>
 - **GridSleepQualityTracker**: room database and grid layout.<br><br>
 - **MarsRealEstate**: use retrofit to connect to an API to fetch Mars real estates!<br><br>
-- **DevByteViewer**: show case room database and retrofit2 with work manager using MVVM architecture.<br><br>
+- **DevByteViewer**: show case room database and retrofit2 with workManager using MVVM architecture.<br><br>
 
 
 # Tools
 
-These application created using Android studio 4.1.1 
+The applications created using Android studio 4.1.1 
