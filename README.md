@@ -15,7 +15,7 @@
  The applications tuned a little from the original course with more features to validate extra development capabilities or to work with latest Android studio and Kotlin releases after the course:
  
 ## Basics
-All applications inside /basic folder:
+All applications under /basic folder:
 
 - **DiceRoller**: the basic of Android layouts and actions.<br><br>
 - **Aboutme**: how to use Android data binding features.<br><br>
@@ -30,9 +30,10 @@ All applications inside /basic folder:
 - **Theme**: themes, styles, overlays, attributes, tint and more.<br><br>
 
 ## Advanced
-All applications inside /advanced folder:
+All applications under /advanced folder:
 
 - **EggTimer**: learn how to show and custom notifications.<br><br>
+- **CustomFanControl**: design and implement the functionality of custom view to control a dummy fan.<br><br>
 
 
 ## Extras
