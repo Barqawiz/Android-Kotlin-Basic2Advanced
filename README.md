@@ -53,13 +53,15 @@ Topic  | Application | Filename
 Toast  | EggTimer | EggTimerFragment
 Snacbar  | SleepQualityTracker | SleepTrackerFragment
 Snacbar  | Theme | GdgListFragment
-Create a Notification | EggTimer | | NotificationUtils
+Create a Notification | EggTimer | NotificationUtils
 AndroidX | DiceRoller | -
 Android KTX | [reference](https://developer.android.com/kotlin/ktx) | -
 Android KTX (Navigation) | AndroidTrivia | MainActivity, navigation_main
 Android KTX (Room) | GridSleepQualityTracker | -
 Android KTX (WorkManager) | DevByteViewer | - 
 
+
+## Extras
 For the latest updated exam topics make sure to review the official exam guide:
 https://developers.google.com/certification/associate-android-developer/study-guide/android-core
 
