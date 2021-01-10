@@ -34,10 +34,12 @@ All applications under /advanced folder:
 
 - **EggTimer**: learn how to show and custom notifications.<br><br>
 - **CustomFanControl**: design and implement the functionality of custom view to control a dummy fan.<br><br>
+- **MiniPaint**: draw on custom view using a canvas and cache for better performance.<br><br>
 
 
 ## Extras
-Projects to showcase the rest of the Android associate certificate topics that was not fully covered in the kotlin series applications:<br>
+Projects to showcase the rest of the Android associate certificate topics, that was not fully covered in the kotlin series applications.<br>
+All applications under /advanced folder:<bt>
 *< to be updated >*
 
 
