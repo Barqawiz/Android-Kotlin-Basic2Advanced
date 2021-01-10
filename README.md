@@ -14,7 +14,7 @@
 
  The applications tuned a little from the original course with more features to validate extra development capabilities or to work with latest Android studio and Kotlin releases after the course:
  
-## Basics
+### Basics
 All applications under /basic folder:
 
 - **DiceRoller**: the basic of Android layouts and actions.<br><br>
@@ -29,7 +29,7 @@ All applications under /basic folder:
 - **DevByteViewer**: show case room database and retrofit2 with workManager using MVVM architecture.<br><br>
 - **Theme**: themes, styles, overlays, attributes, tint and more.<br><br>
 
-## Advanced
+### Advanced
 All applications under /advanced folder:
 
 - **EggTimer**: learn how to show and custom notifications.<br><br>
@@ -37,7 +37,7 @@ All applications under /advanced folder:
 - **MiniPaint**: draw on custom view using a canvas and cache for better performance.<br><br>
 
 
-## Extras
+### Extras
 Projects to showcase the rest of the Android associate certificate topics, that was not fully covered in the kotlin series applications.<br>
 All applications under /advanced folder:<bt>
 *< to be updated >*
@@ -47,7 +47,7 @@ All applications under /advanced folder:<bt>
 # Android Certificate Topics
 This section to show the topics of the Kotlin Android associate developer exam and related reference applications
 
-## Core 
+### Core 
 Topic  | Application | Filename 
 ------------- | ------------- | -------------
 Toast  | EggTimer | EggTimerFragment
@@ -61,7 +61,7 @@ Android KTX (Room) | GridSleepQualityTracker | -
 Android KTX (WorkManager) | DevByteViewer | - 
 
 
-## User Interface
+### User Interface
  Topic  | Application | Filename 
  ------------- | ------------- | -------------
 ConstraintLayout | ColorMyviews | activity_main ,build.gradle
@@ -70,19 +70,19 @@ navigation drawer | AndroidTrivia | MainActivity, activity_main, navdrawer_menu
 Custom view components | CustomFanControl | DialView
 *< to be updated >*
 
-## Data Management
+### Data Management
 *< to be updated >*
 
-## Debugging
+### Debugging
 - Debug reference: https://developer.android.com/studio/debug/
 - Logs with Android: https://developer.android.com/studio/debug/am-logcat
 
 
-## Testing
+### Testing
 *< to be updated >*
 
 
-## Extras
+### Extras
 For the latest updated exam topics make sure to review the official exam guide:
 https://developers.google.com/certification/associate-android-developer/study-guide/android-core
 
