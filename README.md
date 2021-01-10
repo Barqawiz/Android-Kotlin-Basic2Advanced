@@ -47,11 +47,18 @@ All applications under /advanced folder:<bt>
 # Android Certificate Topics
 This section to show the topics of the Kotlin Android associate developer exam and related reference applications
 
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
-
+## Core 
+Topic  | Application | Filename 
+------------- | ------------- | -------------
+Toast  | EggTimer | EggTimerFragment
+Snacbar  | SleepQualityTracker | SleepTrackerFragment
+Snacbar  | Theme | GdgListFragment
+Create a Notification | EggTimer | | NotificationUtils
+AndroidX | DiceRoller | -
+Android KTX | [reference](https://developer.android.com/kotlin/ktx) | -
+Android KTX (Navigation) | AndroidTrivia | MainActivity, navigation_main
+Android KTX (Room) | GridSleepQualityTracker | -
+Android KTX (WorkManager) | DevByteViewer | - 
 
 For the latest updated exam topics make sure to review the official exam guide:
 https://developers.google.com/certification/associate-android-developer/study-guide/android-core
