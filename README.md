@@ -61,6 +61,27 @@ Android KTX (Room) | GridSleepQualityTracker | -
 Android KTX (WorkManager) | DevByteViewer | - 
 
 
+## User Interface
+ Topic  | Application | Filename 
+ ------------- | ------------- | -------------
+ConstraintLayout | ColorMyviews | activity_main ,build.gradle
+list with recyclerView | SleepQualityTracker, GridSleepQualityTracker | SleepNightAdapter, SleepTrackerFragment, fragment_sleep_tracker
+navigation drawer | AndroidTrivia | MainActivity, activity_main, navdrawer_menu
+Custom view components | CustomFanControl | DialView
+*< to be updated >*
+
+## Data Management
+*< to be updated >*
+
+## Debugging
+- Debug reference: https://developer.android.com/studio/debug/
+- Logs with Android: https://developer.android.com/studio/debug/am-logcat
+
+
+## Testing
+*< to be updated >*
+
+
 ## Extras
 For the latest updated exam topics make sure to review the official exam guide:
 https://developers.google.com/certification/associate-android-developer/study-guide/android-core
