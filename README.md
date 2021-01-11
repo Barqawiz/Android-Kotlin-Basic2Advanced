@@ -66,8 +66,8 @@ Android KTX (WorkManager) | DevByteViewer | -
 Topic  | Application | Filename 
 ------------- | ------------- | -------------
 ConstraintLayout | ColorMyviews | activity_main ,build.gradle
-list with recyclerView | SleepQualityTracker, GridSleepQualityTracker | SleepNightAdapter, SleepTrackerFragment, fragment_sleep_tracker
-navigation drawer | AndroidTrivia | MainActivity, activity_main, navdrawer_menu
+RecyclerView list | SleepQualityTracker,<br>GridSleepQualityTracker | SleepNightAdapter,<br>SleepTrackerFragment,<br>fragment_sleep_tracker
+Navigation drawer | AndroidTrivia | MainActivity,<br>activity_main,<br>navdrawer_menu
 Custom view components | CustomFanControl | DialView
 *< to be updated >*
 
@@ -83,8 +83,8 @@ Custom view components | CustomFanControl | DialView
 Topic  | Application | Filename 
 ------------- | ------------- | -------------
 Junit basic | TodoTester | StatisticsUtilsTest
-hamcrest (english written test) | TodoTester | StatisticsUtilsTest
-Junit for liveData and viewModel <br> AndroidX Test | TodoTester | TasksViewModelTest
+hamcrest <br> (English written test) | TodoTester | StatisticsUtilsTest
+Junit for liveData and viewModel <br> (AndroidX test) | TodoTester | TasksViewModelTest
 *< to be updated >*
 
 
