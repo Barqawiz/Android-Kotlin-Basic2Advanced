@@ -75,8 +75,10 @@ Custom view components | CustomFanControl | DialView
 *< to be updated >*
 
 ### Debugging
-- Debug reference: https://developer.android.com/studio/debug/
-- Logs with Android: https://developer.android.com/studio/debug/am-logcat
+Topic  | Reference
+------------- | -------------
+Debugging | https://developer.android.com/studio/debug/
+Android logs | https://developer.android.com/studio/debug/am-logcat
 
 
 ### Testing
