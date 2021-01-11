@@ -35,6 +35,7 @@ All applications under /advanced folder:
 - **EggTimer**: learn how to show and custom notifications.<br><br>
 - **CustomFanControl**: design and implement the functionality of custom view to control a dummy fan.<br><br>
 - **MiniPaint**: draw on custom view using a canvas and cache for better performance.<br><br>
+- **TodoTester**: Write basic tests for a todo application, and choose between instrumented/ local tests.
 
 
 ### Extras
@@ -62,8 +63,8 @@ Android KTX (WorkManager) | DevByteViewer | -
 
 
 ### User Interface
- Topic  | Application | Filename 
- ------------- | ------------- | -------------
+Topic  | Application | Filename 
+------------- | ------------- | -------------
 ConstraintLayout | ColorMyviews | activity_main ,build.gradle
 list with recyclerView | SleepQualityTracker, GridSleepQualityTracker | SleepNightAdapter, SleepTrackerFragment, fragment_sleep_tracker
 navigation drawer | AndroidTrivia | MainActivity, activity_main, navdrawer_menu
@@ -79,12 +80,17 @@ Custom view components | CustomFanControl | DialView
 
 
 ### Testing
+Topic  | Application | Filename 
+------------- | ------------- | -------------
+Junit basic | TodoTester | StatisticsUtilsTest
+hamcrest (english written test) | TodoTester | StatisticsUtilsTest
+Junit for liveData and viewModel <br> AndroidX Test | TodoTester | TasksViewModelTest
 *< to be updated >*
 
 
 ### Extras
 For the latest updated exam topics make sure to review the official exam guide:
-https://developers.google.com/certification/associate-android-developer/study-guide/android-core
+https://developers.google.com/certification/associate-android-developer/study-guide
 
 
 # Tools
