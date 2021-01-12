@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MemoryEater</string>
+    <string name="eat_memory">Eat memory</string>
+    <string name="release_memory">Release memory</string>
+    <string name="memory_eater">Memory Eater</string>
+    <string name="ready">Ready!</string>
+    <string name="report_label">Number of items</string>
+</resources>

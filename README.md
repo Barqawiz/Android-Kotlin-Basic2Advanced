@@ -42,7 +42,7 @@ All applications under /advanced folder:
 Projects to showcase the rest of the Android associate certificate topics, that was not fully covered in the kotlin series applications.<br>
 All applications under /extras folder:<bt>
 - **MotionDemo**: learn how to build widget animation using the motion layout.
-
+- **MemoryEater**: async task and memory leaks.
 
 
 # Android Certificate Topics
