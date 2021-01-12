@@ -12,7 +12,7 @@
  
 # Available applications
 
- The applications tuned a little from the original course with more features to validate extra development capabilities or to work with latest Android studio and Kotlin releases after the course:
+ The applications tuned a little from the original course with more features to validate extra development capabilities or to work with latest Android studio and Kotlin releases in 2021 after the course:
  
 ### Basics
 All applications under /basic folder:
@@ -40,12 +40,13 @@ All applications under /advanced folder:
 
 ### Extras
 Projects to showcase the rest of the Android associate certificate topics, that was not fully covered in the kotlin series applications.<br>
-All applications under /advanced folder:<bt>
-*< to be updated >*
+All applications under /extras folder:<bt>
+- **MotionDemo**: learn how to build widget animation using the motion layout.
 
 
 
 # Android Certificate Topics
+
 This section to show the topics of the Kotlin Android associate developer exam and related reference applications
 
 ### Core 
@@ -87,11 +88,17 @@ Topic  | Application | Filename
 Junit basic | TodoTester | StatisticsUtilsTest
 Hamcrest <br> (English written test) | TodoTester | StatisticsUtilsTest
 Junit for liveData and viewModel <br> (AndroidX test) | TodoTester | TasksViewModelTest
+Fake viewModel repository | TodoTester | TasksViewModelTestFake
+Dependency inject test | TodoTester | DefaultTasksRepositoryTest,<br>,
+coroutines test | TodoTester | build.gradle,<br>DefaultTasksRepositoryTest
+Fragment tntigration test<br>using junit with fake data<br>(Espresso & Mokito) | TodoTester | 
+
+
 *< to be updated >*
 
 
-### Extras
-For the latest updated exam topics make sure to review the official exam guide:
+### Important
+Make sure to review the official exam guide:, for the latest updated exam topics:
 https://developers.google.com/certification/associate-android-developer/study-guide
 
 
