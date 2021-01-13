@@ -32,7 +32,7 @@ All applications under /basic folder:
 ### Advanced
 All applications under /advanced folder:
 
-- **EggTimer**: learn how to show and custom notifications.<br><br>
+- **EggTimer**: learn how to show and custom notifications (*require to generate google-services.json from firebase*).<br><br>
 - **CustomFanControl**: design and implement the functionality of custom view to control a dummy fan.<br><br>
 - **MiniPaint**: draw on custom view using a canvas and cache for better performance.<br><br>
 - **TodoTester**: Write basic tests for a todo application, and choose between instrumented/ local tests.
