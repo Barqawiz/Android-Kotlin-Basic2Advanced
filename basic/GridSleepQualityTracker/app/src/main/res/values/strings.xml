@@ -61,4 +61,7 @@
     <string name="dummy_duration">Duration</string>
     <string name="dummy_quality">Quality</string>
 
+    <!-- Details -->
+    <string name="title_details">Details</string>
+
 </resources>

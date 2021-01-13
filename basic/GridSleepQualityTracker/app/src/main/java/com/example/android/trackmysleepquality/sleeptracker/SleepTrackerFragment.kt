@@ -16,6 +16,7 @@
 
 package com.example.android.trackmysleepquality.sleeptracker
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -29,6 +30,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.android.trackmysleepquality.R
 import com.example.android.trackmysleepquality.database.SleepDatabase
 import com.example.android.trackmysleepquality.databinding.FragmentSleepTrackerBinding
+import com.example.android.trackmysleepquality.details.DetailsActivity
 import com.google.android.material.snackbar.Snackbar
 
 /**
@@ -102,7 +104,16 @@ class SleepTrackerFragment : Fragment() {
         }
 
         viewModel.detailsMesssage.observe(viewLifecycleOwner) { message ->
+            // show the details
             Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+            // open activity with details
+            val intent = Intent(activity, DetailsActivity::class.java).apply {
+                // set extra data
+                putExtra("message", message)
+            }
+
+
+            startActivity(intent)
         }
 
         return binding.root
