@@ -1,43 +1,37 @@
 package com.example.android.architecture.blueprints.todoapp.tasks
 
-import android.os.Build
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.example.android.architecture.blueprints.todoapp.ServiceLocator
-import com.example.android.architecture.blueprints.todoapp.data.source.DefaultTasksRepository
-import com.example.android.architecture.blueprints.todoapp.data.source.IDefaultTasksRepository
+import com.example.android.architecture.blueprints.todoapp.data.Task
+import com.example.android.architecture.blueprints.todoapp.data.source.FakeTestRepository
 import org.junit.Assert
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.Assert.*
 import org.junit.Before
-import org.robolectric.annotation.Config
 
 /**
+ * Important: Note this fake version does not require the AndroidJUnit4 any more, because it use fake datasource
+ *
  * To run a local test that require a class from Android:
  * 1- Add AndroidX test dependencies
- * 2- Add Robolectric dependency
- * 3- Use AndroidX test library
- * 4- Add AndroidJunit4 test runner
+ * 2- Use AndroidX test library
+ * 3- Add espresso and mokito
  *
- * The related dependency for point (1,2,3)
+ * The related dependency for point (1,2)
  * testImplementation "androidx.test.ext:junit-ktx:$androidXTestExtKotlinRunnerVersion"
  * testImplementation "androidx.test:core-ktx:$androidXTestCoreVersion"
- * testImplementation "org.robolectric:robolectric:$robolectricVersion"
- *
- * The class tag for point (4):
- * @RunWith(AndroidJUnit4::class)
  *
  * Note that AndroidX Test can run on both local and emulator instrument
  *
- * Resolve common errors for viewModels and Robolectric:
- * https://classroom.udacity.com/courses/ud940/lessons/fa3a54ab-2da2-46b9-af73-e7f05b20f90f/concepts/a340ca7f-06bf-41b7-979f-d3ef49381a55
+ *
  */
-@RunWith(AndroidJUnit4::class)
-class TasksViewModelTest {
+class TasksViewModelTestFake {
+
+    // Use a fake repository to be injected into the viewmodel
+    private lateinit var tasksRepository: FakeTestRepository
 
     // instant task executor rule - junit rules
     // rules run before and after each run
@@ -47,17 +41,21 @@ class TasksViewModelTest {
 
     // Subject under test
     private lateinit var taskViewModel: TasksViewModel
-    private lateinit var tasksRepository: IDefaultTasksRepository
 
     @Before
     fun setupViewModel() {
+
         // how to get application context from text test class
         // ApplicationProvider.getApplicationContext()
 
-        tasksRepository = ServiceLocator.provideTaskRepository(ApplicationProvider.getApplicationContext())
+        // We initialise the tasks to 3, with one active and two completed
+        tasksRepository = FakeTestRepository()
+        val task1 = Task("Title1", "Description1")
+        val task2 = Task("Title2", "Description2", true)
+        val task3 = Task("Title3", "Description3", true)
+        tasksRepository.addTasks(task1, task2, task3)
 
         taskViewModel = TasksViewModel(tasksRepository)
-
     }
 
     @Test
@@ -74,9 +72,6 @@ class TasksViewModelTest {
 
     @Test
     fun setFilterAllTasks_tasksAddViewVisible() {
-
-        // Given a fresh ViewModel
-        val taskViewModel = TasksViewModel(tasksRepository)
 
         // When the filter type is ALL_TASKS
         taskViewModel.setFiltering(TasksFilterType.ALL_TASKS)

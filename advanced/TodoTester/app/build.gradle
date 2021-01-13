@@ -21,6 +21,10 @@ android {
         }
     }
 
+    testOptions.unitTests {
+        includeAndroidResources = true
+    }
+
     dataBinding {
         enabled = true
         enabledForTests = true
@@ -70,10 +74,25 @@ dependencies {
     testImplementation "org.robolectric:robolectric:$robolectricVersion"
     // Extra - Junit executor rule
     testImplementation "androidx.arch.core:core-testing:$archTestingVersion"
+    // Extra - coroutines test
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion"
+
 
     // AndroidX Test - Instrumented testing
     androidTestImplementation "androidx.test.ext:junit:$androidXTestExtKotlinRunnerVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    // Extra - More advanced test view for espresso by external contribution
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
+    // Junit test for Android test
+    androidTestImplementation "junit:junit:$junitVersion"
+    // Extra - coroutines Android test
+    androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion"
+    // Extra - Fragment test
+    // Testing code should not be included in the main code.
+    // Once https://issuetracker.google.com/128612536 is fixed this can be fixed.
+    debugImplementation "androidx.fragment:fragment-testing:$fragmentVersion"
+    implementation "androidx.test:core:$androidXTestCoreVersion"
+
 
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"

@@ -6,7 +6,7 @@
  This repository includes Kotlin sample application created based on latest Android guidelines available in the following references:<br>
 - Developing Android apps with Kotlin series. <br>
 - Advanced Android apps with Kotlin series. <br>
-- [Associate Android developer materials](https://developers.google.com/certification/associate-android-developer).<br>
+- Associate Android developer materials](https://developers.google.com/certification/associate-android-developer).<br>
  
  You can use these applications as reference to learn more about Android latest features or to prepare for Android associate developer certificate. 
  
@@ -41,6 +41,7 @@ All applications under /advanced folder:
 ### Extras
 Projects to showcase the rest of the Android associate certificate topics, that was not fully covered in the kotlin series applications.<br>
 All applications under /extras folder:<bt>
+
 - **MotionDemo**: learn how to build widget animation using the motion layout.
 - **MemoryEater**: async task and memory leaks.
 
@@ -83,15 +84,15 @@ Android logs | https://developer.android.com/studio/debug/am-logcat
 
 
 ### Testing
-Topic  | Application | Filename 
-------------- | ------------- | -------------
-Junit basic | TodoTester | StatisticsUtilsTest
-Hamcrest <br> (English written test) | TodoTester | StatisticsUtilsTest
-Junit for liveData and viewModel <br> (AndroidX test) | TodoTester | TasksViewModelTest
-Fake viewModel repository | TodoTester | TasksViewModelTestFake
-Dependency inject test | TodoTester | DefaultTasksRepositoryTest,<br>,
-coroutines test | TodoTester | build.gradle,<br>DefaultTasksRepositoryTest
-Fragment tntigration test<br>using junit with fake data<br>(Espresso & Mokito) | TodoTester | 
+Topic  | Application | Filename | Method
+------------- | ------------- | ------------- | -------------
+Junit basic| TodoTester | StatisticsUtilsTest | Local Test
+Hamcrest<br> (English written test) | TodoTester | StatisticsUtilsTest | Local Test
+Junit for liveData and viewModel<br> (AndroidX test) | TodoTester | TasksViewModelTest | Local Test
+Fake viewModel repository | TodoTester | TasksViewModelTestFake | Local Test
+Dependency inject test | TodoTester | DefaultTasksRepositoryTest | Local Test
+coroutines test | TodoTester | build.gradle,<br>DefaultTasksRepositoryTest | Local Test
+Fragment intigration test<br>(ServiceLocator, Espresso & Mokito) | TodoTester | build.gradle,<br>ServiceLocator,<br>TodoApplication,<br>TaskDetailFragmentTest | AndroidTest
 
 
 *< to be updated >*
