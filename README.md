@@ -93,7 +93,7 @@ Fake viewModel repository | TodoTester | TasksViewModelTestFake | Local Test
 Dependency inject test | TodoTester | DefaultTasksRepositoryTest | Local Test
 coroutines test | TodoTester | build.gradle,<br>DefaultTasksRepositoryTest | Local Test
 Fragment intigration test<br>(ServiceLocator, Espresso & Mokito) | TodoTester | build.gradle,<br>ServiceLocator,<br>TodoApplication,<br>TaskDetailFragmentTest | AndroidTest
-
+Mocks using mockito | TodoTester | TasksFragmentTest | AndroidTest
 
 *< to be updated >*
 
