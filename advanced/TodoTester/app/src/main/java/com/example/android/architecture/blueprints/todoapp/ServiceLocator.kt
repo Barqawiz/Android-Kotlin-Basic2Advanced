@@ -26,7 +26,7 @@ object ServiceLocator {
     // parameter used for clean repository function
     private val lock = Any()
 
-    fun provideTaskRepository(context: Context): IDefaultTasksRepository {
+    fun provideTasksRepository(context: Context): IDefaultTasksRepository {
         synchronized(this) {
             return tasksRepository ?: createTaskRepository(context)
         }

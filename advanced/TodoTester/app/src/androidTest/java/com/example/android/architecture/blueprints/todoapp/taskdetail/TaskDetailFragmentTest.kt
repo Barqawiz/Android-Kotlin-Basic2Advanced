@@ -51,6 +51,10 @@ class TaskDetailFragmentTest {
         ServiceLocator.resetRepository()
     }
 
+    /**
+     * runBlockingTest ensure the testing scripts run in deterministic order
+     * Required @ExperimentalCoroutinesApi and kotlinx-coroutines-test
+     */
     @Test
     fun activateTaskDetails_DisplayInUI() = runBlockingTest {
         // GIVEN - Add active (incomplete) task to the DB

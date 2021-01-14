@@ -1,20 +1,16 @@
 package com.example.android.architecture.blueprints.todoapp.tasks
 
-import android.os.Build
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.android.architecture.blueprints.todoapp.ServiceLocator
-import com.example.android.architecture.blueprints.todoapp.data.source.DefaultTasksRepository
 import com.example.android.architecture.blueprints.todoapp.data.source.IDefaultTasksRepository
-import org.junit.Assert
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.Assert.*
 import org.junit.Before
-import org.robolectric.annotation.Config
 
 /**
  * To run a local test that require a class from Android:
@@ -54,7 +50,7 @@ class TasksViewModelTest {
         // how to get application context from text test class
         // ApplicationProvider.getApplicationContext()
 
-        tasksRepository = ServiceLocator.provideTaskRepository(ApplicationProvider.getApplicationContext())
+        tasksRepository = ServiceLocator.provideTasksRepository(ApplicationProvider.getApplicationContext())
 
         taskViewModel = TasksViewModel(tasksRepository)
 

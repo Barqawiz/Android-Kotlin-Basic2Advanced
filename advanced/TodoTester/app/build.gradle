@@ -95,6 +95,9 @@ dependencies {
     // Extra - Mockito
     androidTestImplementation "org.mockito:mockito-core:$mockitoVersion"
     androidTestImplementation "com.linkedin.dexmaker:dexmaker-mockito:$dexMakerVersion"
+    // Extra - Helper for other arch dependencies
+    // used with Rome, liveData, databases and advanced testing topics
+    androidTestImplementation "androidx.arch.core:core-testing:$archTestingVersion"
 
 
 

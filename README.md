@@ -74,6 +74,9 @@ Custom view components | CustomFanControl | DialView
 *< to be updated >*
 
 ### Data Management
+Topic  | Application | Filename | Fun
+------------- | ------------- | ------------- | -------------
+viewModelScope | TodoTester| TasksViewModel | completeTask,<br>clearCompletedTasks
 *< to be updated >*
 
 ### Debugging
@@ -84,7 +87,7 @@ Android logs | https://developer.android.com/studio/debug/am-logcat
 
 
 ### Testing
-Topic  | Application | Filename | Method
+Topic  | Application | Filename | Test Method
 ------------- | ------------- | ------------- | -------------
 Junit basic| TodoTester | StatisticsUtilsTest | Local Test
 Hamcrest<br> (English written test) | TodoTester | StatisticsUtilsTest | Local Test
@@ -94,9 +97,11 @@ Dependency inject test | TodoTester | DefaultTasksRepositoryTest | Local Test
 coroutines test | TodoTester | build.gradle,<br>DefaultTasksRepositoryTest | Local Test
 Fragment intigration test<br>(ServiceLocator, Espresso & Mokito) | TodoTester | build.gradle,<br>ServiceLocator,<br>TodoApplication,<br>TaskDetailFragmentTest | AndroidTest
 Mocks using mockito | TodoTester | TasksFragmentTest | AndroidTest
-
-*< to be updated >*
-
+runBlockingTest | TodoTester | TasksFragmentTest | AndroidTest
+Junit rule & coroutine dispatcher | TodoTester | MainCoroutineRule,<br>TasksViewModelTestFake | Local Test
+Room and Dao test | TodoTester | build.gradle,<br>TasksDaoTest | AndroidTest
+Room and local data source | TodoTester | build.gradle,<br>TasksLocalDataSourceTest | AndroidTest
+End to end espresso test<br>(ActivityScenario used) | TodoTester | TasksActivityTest | AndroidTest
 
 ### Important
 Make sure to review the official exam guide:, for the latest updated exam topics:

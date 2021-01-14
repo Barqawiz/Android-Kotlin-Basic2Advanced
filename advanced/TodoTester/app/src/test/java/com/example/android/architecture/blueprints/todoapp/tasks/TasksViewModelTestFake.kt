@@ -3,14 +3,21 @@ package com.example.android.architecture.blueprints.todoapp.tasks
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.example.android.architecture.blueprints.todoapp.Event
+import com.example.android.architecture.blueprints.todoapp.MainCoroutineRule
+import com.example.android.architecture.blueprints.todoapp.R
 import com.example.android.architecture.blueprints.todoapp.data.Task
 import com.example.android.architecture.blueprints.todoapp.data.source.FakeTestRepository
-import org.junit.Assert
-import org.junit.Rule
-import org.junit.Test
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.test.TestCoroutineDispatcher
+import kotlinx.coroutines.test.resetMain
+import kotlinx.coroutines.test.setMain
+import org.hamcrest.CoreMatchers.`is`
+import org.hamcrest.MatcherAssert.assertThat
+import org.junit.*
 import org.junit.runner.RunWith
 import org.junit.Assert.*
-import org.junit.Before
 
 /**
  * Important: Note this fake version does not require the AndroidJUnit4 any more, because it use fake datasource
@@ -28,7 +35,16 @@ import org.junit.Before
  *
  *
  */
+@ExperimentalCoroutinesApi
 class TasksViewModelTestFake {
+
+    /** start TestCoroutineDispatcher using junit rule ***/
+    // related to the function --> completeTask_dataAndSnackbarUpdated
+    // related to library execution --> kotlinx-coroutines-test
+    @get:Rule
+    var mainCoroutineRule = MainCoroutineRule()
+    /** end TestCoroutineDispatcher ***/
+
 
     // Use a fake repository to be injected into the viewmodel
     private lateinit var tasksRepository: FakeTestRepository
@@ -80,6 +96,23 @@ class TasksViewModelTestFake {
         var value = taskViewModel.tasksAddViewVisible.getOrAwaitValue()
         assertEquals(true, value)
 
+    }
+
+    @Test
+    fun completeTask_dataAndSnackbarUpdated() {
+        // Create an active task and add it to the repository.
+        val task = Task("Title", "Description")
+        tasksRepository.addTasks(task)
+
+        // Mark the task as complete task.
+        taskViewModel.completeTask(task, true)
+
+        // Verify the task is completed.
+        assertThat(tasksRepository.tasksServiceData[task.id]?.isCompleted, `is`(true))
+
+        // Assert that the snackbar has been updated with the correct text.
+        val snackbarText: Event<Int> =  taskViewModel.snackbarText.getOrAwaitValue()
+        assertThat(snackbarText.getContentIfNotHandled(), `is`(R.string.task_marked_complete))
     }
 
 }
