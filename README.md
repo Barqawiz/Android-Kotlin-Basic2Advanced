@@ -36,7 +36,7 @@ All applications under /advanced folder:
 - **CustomFanControl**: design and implement the functionality of custom view to control a dummy fan.<br><br>
 - **MiniPaint**: draw on custom view using a canvas and cache for better performance.<br><br>
 - **TodoTester**: Write basic tests for a todo application, and choose between instrumented/ local tests.
-
+- **firebaseLogin**: Create user authentication using Firebase backend.
 
 ### Extras
 Projects to showcase the rest of the Android associate certificate topics, that was not fully covered in the kotlin series applications.<br>
