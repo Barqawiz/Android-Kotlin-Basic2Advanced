@@ -35,16 +35,16 @@ All applications under /advanced folder:
 - **EggTimer**: learn how to show and custom notifications (*require to generate google-services.json from firebase*).<br><br>
 - **CustomFanControl**: design and implement the functionality of custom view to control a dummy fan.<br><br>
 - **MiniPaint**: draw on custom view using a canvas and cache for better performance.<br><br>
-- **TodoTester**: Write basic tests for a todo application, and choose between instrumented/ local tests.
-- **firebaseLogin**: Create user authentication using Firebase backend.
+- **TodoTester**: Write basic tests for a todo application, and choose between instrumented/ local tests.<br><br>
+- **firebaseLogin**: Create user authentication using Firebase backend.<br><br>
 
 ### Extras
 Projects to showcase the rest of the Android associate certificate topics, that was not fully covered in the kotlin series applications.<br>
 All applications under /extras folder:<bt>
 
-- **MotionDemo**: learn how to build widget animation using the motion layout.
-- **MemoryEater**: async task and memory leaks.
-
+- **MotionDemo**: learn how to build widget animation using the motion layout.<br><br>
+- **MemoryEater**: async task and memory leaks.<br><br>
+- **GitHubPaging**: search GitHub for repositories displayed in paging list.<br><br>
 
 # Android Certificate Topics
 
@@ -71,6 +71,11 @@ ConstraintLayout | ColorMyviews | activity_main,<br>build.gradle
 RecyclerView list | SleepQualityTracker,<br>GridSleepQualityTracker | SleepNightAdapter,<br>SleepTrackerFragment,<br>fragment_sleep_tracker
 Navigation drawer | AndroidTrivia | MainActivity,<br>activity_main,<br>navdrawer_menu
 Custom view components | CustomFanControl | DialView
+Start activity | GridSleepQualityTracker | SleepTrackerFragment
+Start activity with result | FirebaseLogin | MainFragment (firebaseLauncher)
+themes | Theme | -
+Lifecycles | DessertPusher | -
+Paging library and flow | GitHubPaging | GithubPagingSource,<br>GithubRepository,<br>SearchRepositoriesViewModel,<br>ReposAdapter
 *< to be updated >*
 
 ### Data Management
