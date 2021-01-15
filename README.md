@@ -76,6 +76,7 @@ Start activity with result | FirebaseLogin | MainFragment (firebaseLauncher)
 themes | Theme | -
 Lifecycles | DessertPusher | -
 Paging library and flow | GitHubPaging | GithubPagingSource,<br>GithubRepository,<br>SearchRepositoriesViewModel,<br>ReposAdapter
+Loading state footer | GitHubPaging | ReposLoadStateViewHolder,<br>ReposLoadStateAdapter,<br>SearchRepositoriesActivity (initAdapter)
 *< to be updated >*
 
 ### Data Management
