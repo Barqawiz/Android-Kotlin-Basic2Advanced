@@ -75,10 +75,10 @@ Custom view components | CustomFanControl | DialView
 Start activity | GridSleepQualityTracker | SleepTrackerFragment
 Start activity with result | FirebaseLogin | MainFragment (firebaseLauncher)
 themes | Theme | -
-Lifecycles | DessertPusher | -
+Lifecycles | DessertPusher | MainActivity
 Paging library and flow | GitHubPaging | GithubPagingSource,<br>GithubRepository,<br>SearchRepositoriesViewModel,<br>ReposAdapter
 Loading state footer | GitHubPaging | ReposLoadStateViewHolder,<br>ReposLoadStateAdapter,<br>SearchRepositoriesActivity (initAdapter)
-*< to be updated >*
+Menu | AndroidTrivia | winner_menu,<br>GameWonFragment
 
 ### Data Management
 Topic  | Application | Filename | Fun
@@ -86,7 +86,8 @@ Topic  | Application | Filename | Fun
 viewModelScope | TodoTester| TasksViewModel | completeTask,<br>clearCompletedTasks
 App settings with shared preferences | AppWithSettings | SettingsFragment, MainActivity (displaySwitchValue)
 App settings with shared preferences | firebaseLogin | settings,<br>SettingsFragment
-*< to be updated >*
+Room database and liveview | SleepQualityTracker,<br>GridSleepQualityTracker | SleepTrackerViewModel (allNights)
+Repository | DevByteViewer | VideosRepository,<br>VideoDao,<br>Network
 
 ### Debugging
 Topic  | Reference
