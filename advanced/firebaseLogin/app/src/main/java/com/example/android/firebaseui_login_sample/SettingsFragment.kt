@@ -41,6 +41,8 @@ class SettingsFragment : PreferenceFragmentCompat() {
         super.onViewCreated(view, savedInstanceState)
 
         val navController = findNavController()
+
+        // handle the authentication - if the used not logged in go to login fragment
         viewModel.authenticationState.observe(viewLifecycleOwner, Observer { authenticationState ->
             when (authenticationState) {
                 LoginViewModel.AuthenticationState.AUTHENTICATED -> Log.i(TAG, "Authenticated")

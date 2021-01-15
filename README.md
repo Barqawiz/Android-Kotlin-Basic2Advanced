@@ -45,6 +45,7 @@ All applications under /extras folder:<bt>
 - **MotionDemo**: learn how to build widget animation using the motion layout.<br><br>
 - **MemoryEater**: async task and memory leaks.<br><br>
 - **GitHubPaging**: search GitHub for repositories displayed in paging list.<br><br>
+- **AppWithSettings**: Simple settings fragment with toggle switch.<br><br>
 
 # Android Certificate Topics
 
@@ -54,8 +55,8 @@ This section to show the topics of the Kotlin Android associate developer exam a
 Topic  | Application | Filename 
 ------------- | ------------- | -------------
 Toast  | EggTimer | EggTimerFragment
-Snacbar  | SleepQualityTracker | SleepTrackerFragment
-Snacbar  | Theme | GdgListFragment
+Snackbar  | SleepQualityTracker | SleepTrackerFragment
+Snackbar  | Theme | GdgListFragment
 Create a Notification | EggTimer | NotificationUtils
 AndroidX | DiceRoller | -
 Android KTX | [reference](https://developer.android.com/kotlin/ktx) | -
@@ -83,6 +84,8 @@ Loading state footer | GitHubPaging | ReposLoadStateViewHolder,<br>ReposLoadStat
 Topic  | Application | Filename | Fun
 ------------- | ------------- | ------------- | -------------
 viewModelScope | TodoTester| TasksViewModel | completeTask,<br>clearCompletedTasks
+App settings with shared preferences | AppWithSettings | SettingsFragment, MainActivity (displaySwitchValue)
+App settings with shared preferences | firebaseLogin | settings,<br>SettingsFragment
 *< to be updated >*
 
 ### Debugging
