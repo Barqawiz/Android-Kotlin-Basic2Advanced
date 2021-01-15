@@ -24,6 +24,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -40,6 +44,9 @@ class MainFragment : Fragment() {
         const val SIGN_IN_RESULT_CODE = 1001
     }
 
+    // launch activity for result
+    private lateinit var firebaseLauncher: ActivityResultLauncher<Intent>
+
     // Get a reference to the ViewModel scoped to this Fragment
     private val viewModel by viewModels<LoginViewModel>()
     private lateinit var binding: FragmentMainBinding
@@ -53,6 +60,26 @@ class MainFragment : Fragment() {
         binding.welcomeText.text = viewModel.getFactToDisplay(requireContext())
         binding.authButton.text = getString(R.string.login_btn)
 
+        firebaseLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            val data: Intent? = result.data
+            val response = IdpResponse.fromResultIntent(data)
+
+            if (response == null) {
+                Log.d("Firebase", "cancelled login")
+            } else {
+                if (result.resultCode == Activity.RESULT_OK) {
+                    // There are no request codes
+                    processFirebaseSuccessLogin(response!!)
+                } else {
+                    response.let {
+                        processFirebaseFailureLogin(response!!)
+                    }
+
+                }
+            }
+
+        }
+
         return binding.root
     }
 
@@ -60,16 +87,20 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         observeAuthenticationState()
 
-        binding.authButton.setOnClickListener {
-            // TODO call launchSignInFlow when authButton is clicked
+        // setting button
+        binding.settingsBtn.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToSettingsFragment()
+            findNavController().navigate(action)
         }
-    }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        // TODO Listen to the result of the sign in process by filter for when
-        //  SIGN_IN_REQUEST_CODE is passed back. Start by having log statements to know
-        //  whether the user has signed in successfully
+        // login/ logout button
+        binding.authButton.setOnClickListener {
+            binding.authButton.setOnClickListener {
+                Toast.makeText(activity, "clicked", Toast.LENGTH_LONG).show()
+                launchSignInFlow()
+            }
+
+        }
     }
 
     /**
@@ -80,16 +111,30 @@ class MainFragment : Fragment() {
     private fun observeAuthenticationState() {
         val factToDisplay = viewModel.getFactToDisplay(requireContext())
 
-        // TODO Use the authenticationState variable from LoginViewModel to update the UI
-        //  accordingly.
-        //
-        //  TODO If there is a logged-in user, authButton should display Logout. If the
-        //   user is logged in, you can customize the welcome message by utilizing
-        //   getFactWithPersonalition(). I
+        viewModel.authenticationState.observe(viewLifecycleOwner, Observer { authenticationState ->
+            when (authenticationState) {
+                LoginViewModel.AuthenticationState.AUTHENTICATED -> {
+                    // logged in user
+                    binding.authButton.text = getString(R.string.logout_button_text)
+                    binding.authButton.setOnClickListener {
+                        AuthUI.getInstance().signOut(requireContext())
+                    }
 
-        // TODO If there is no logged in user, authButton should display Login and launch the sign
-        //  in screen when clicked. There should also be no personalization of the message
-        //  displayed.
+                    // If the user is logged in,
+                    binding.welcomeText.text = getFactWithPersonalization(factToDisplay)
+
+                }
+                else -> {
+                    // not logged in user
+                    binding.welcomeText.text = factToDisplay
+
+                    binding.authButton.text = getString(R.string.login_button_text)
+                    binding.authButton.setOnClickListener {
+                        launchSignInFlow()
+                    }
+                }
+            }
+        })
     }
 
 
@@ -104,7 +149,31 @@ class MainFragment : Fragment() {
     }
 
     private fun launchSignInFlow() {
-        // TODO Complete this function by allowing users to register and sign in with
-        //  either their email address or Google account.
+        // Give users the option to sign in / register with their email or Google account.
+        // If users choose to register with their email,
+        // they will need to create a password as well.
+        val providers = arrayListOf(
+            AuthUI.IdpConfig.EmailBuilder().build(), AuthUI.IdpConfig.GoogleBuilder().build()
+
+            // This is where you can provide more ways for users to register and
+            // sign in.
+        )
+        // Create and launch sign-in intent.
+        firebaseLauncher.launch(AuthUI.getInstance().createSignInIntentBuilder().setAvailableProviders(
+            providers
+        ).build())
+
     }
+
+    private fun processFirebaseSuccessLogin(response: IdpResponse) {
+        Toast.makeText(activity, "Successful Login in user " +
+                "${FirebaseAuth.getInstance().currentUser?.displayName}", Toast.LENGTH_LONG).show()
+
+    }
+
+    private fun processFirebaseFailureLogin(response: IdpResponse) {
+        Toast.makeText(activity, "Failed Login with error code: ${response?.error?.errorCode}", Toast.LENGTH_LONG).show()
+    }
+
+
 }
