@@ -6,7 +6,7 @@
  This repository includes Kotlin sample application created based on latest Android guidelines available in the following references:<br>
 - Developing Android apps with Kotlin series. <br>
 - Advanced Android apps with Kotlin series. <br>
-- Associate Android developer materials](https://developers.google.com/certification/associate-android-developer).<br>
+- [Associate Android developer materials](https://developers.google.com/certification/associate-android-developer).<br>
  
  You can use these applications as reference to learn more about Android latest features or to prepare for Android associate developer certificate. 
  
