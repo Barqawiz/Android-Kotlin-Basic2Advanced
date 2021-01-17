@@ -57,7 +57,7 @@ Topic  | Application | Filename
 Toast  | EggTimer | EggTimerFragment
 Snackbar  | SleepQualityTracker | SleepTrackerFragment
 Snackbar  | Theme | GdgListFragment
-Create a Notification | EggTimer | NotificationUtils,<br>AlarmReceiver [optional]
+Create a Notification | EggTimer | NotificationUtils,<br>EggTimerFragment (createChannel),<br>AlarmReceiver [optional]
 AndroidX | DiceRoller | -
 Android KTX | [reference](https://developer.android.com/kotlin/ktx) | -
 Android KTX (Navigation) | AndroidTrivia | MainActivity,<br>navigation_main
