@@ -74,6 +74,7 @@ Navigation drawer | AndroidTrivia | MainActivity,<br>activity_main,<br>navdrawer
 Custom view components | CustomFanControl | DialView
 Start activity | GridSleepQualityTracker | SleepTrackerFragment
 Start activity with result | FirebaseLogin | MainFragment (firebaseLauncher)
+Share Intent | AndroidTrivia | GameWonFragment (createShareIntent)
 themes | Theme | -
 Lifecycles | DessertPusher | MainActivity
 Paging library and flow | GitHubPaging | GithubPagingSource,<br>GithubRepository,<br>SearchRepositoriesViewModel,<br>ReposAdapter
