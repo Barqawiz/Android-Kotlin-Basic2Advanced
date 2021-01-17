@@ -62,7 +62,7 @@ AndroidX | DiceRoller | -
 Android KTX | [reference](https://developer.android.com/kotlin/ktx) | -
 Android KTX (Navigation) | AndroidTrivia | MainActivity,<br>navigation_main
 Android KTX (Room) | GridSleepQualityTracker | -
-Android KTX (WorkManager) | DevByteViewer | - 
+Android KTX (WorkManager) | DevByteViewer | RefreshDataWork,<br>DevByteApplication (setupPeriodicWorker)
 
 
 ### User Interface
