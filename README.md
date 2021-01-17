@@ -60,7 +60,7 @@ Snackbar  | Theme | GdgListFragment
 Create a Notification | EggTimer | NotificationUtils,<br>AlarmReceiver [optional]
 AndroidX | DiceRoller | -
 Android KTX | [reference](https://developer.android.com/kotlin/ktx) | -
-Android KTX (Navigation) | AndroidTrivia | MainActivity, navigation_main
+Android KTX (Navigation) | AndroidTrivia | MainActivity,<br>navigation_main
 Android KTX (Room) | GridSleepQualityTracker | -
 Android KTX (WorkManager) | DevByteViewer | - 
 
