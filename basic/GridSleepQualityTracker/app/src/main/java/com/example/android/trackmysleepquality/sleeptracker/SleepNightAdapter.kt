@@ -19,7 +19,8 @@ private val ITEM_VIEW_TYPE_ITEM = 1
 * changes introduced to support headers with recycle view:
 * https://www.youtube.com/watch?v=cd3OTFak_K8&feature=emb_logo
 * */
-class SleepNightAdapter(val clickListener: SleepNightListener): ListAdapter<DataItem, RecyclerView.ViewHolder>(SleepNightDiffCallback()) {
+class SleepNightAdapter(val clickListener: SleepNightListener):
+        ListAdapter<DataItem, RecyclerView.ViewHolder>(SleepNightDiffCallback()) {
 
     private val adapterScope = CoroutineScope(Dispatchers.Default)
 

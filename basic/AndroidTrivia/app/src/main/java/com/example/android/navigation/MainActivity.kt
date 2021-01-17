@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
 
         // initial
-        drawerLayout = binding.draweLayout
+        drawerLayout = binding.drawerLayout
 
         // handle up button navigation
         val navController = findNavController(R.id.fragment_navigation_host)
