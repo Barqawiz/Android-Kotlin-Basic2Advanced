@@ -49,7 +49,7 @@ All applications under /extras folder:<bt>
 
 # Android Certificate Topics
 
-This section to show the topics of the Kotlin Android associate developer exam and related reference applications
+This section to show the topics of the Kotlin Android associate developer exam and related reference applications in this repository.
 
 ### Core 
 Topic  | Application | Filename 
